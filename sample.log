@@ -1,0 +1,954 @@
+🟩 ログを初期化
+🟩 Parsing model identifier. Schema: None, Identifier: ViT-L-14
+🟩 Loaded built-in ViT-L-14 model config.
+🟦 Starting new HTTPS connection (1): huggingface.co:443
+🟦 https://huggingface.co:443 "HEAD /timm/vit_large_patch14_clip_224.openai/resolve/main/open_clip_model.safetensors HTTP/1.1" 302 0
+🟩 Instantiating model architecture: CLIP
+🟩 Loading full pretrained weights from: /root/.cache/huggingface/hub/models--timm--vit_large_patch14_clip_224.openai/snapshots/18d0535469bb561bf468d76c1d73aa35156c922b/open_clip_model.safetensors
+🟩 Final image preprocessing configuration set: {'size': (224, 224), 'mode': 'RGB', 'mean': (0.48145466, 0.4578275, 0.40821073), 'std': (0.26862954, 0.26130258, 0.27577711), 'interpolation': 'bicubic', 'resize_mode': 'shortest', 'fill_color': 0}
+🟩 Model ViT-L-14 creation process complete.
+🟦 https://huggingface.co:443 "HEAD /anas-awadalla/mpt-1b-redpajama-200b/resolve/main/tokenizer_config.json HTTP/1.1" 307 0
+🟦 https://huggingface.co:443 "HEAD /api/resolve-cache/models/anas-awadalla/mpt-1b-redpajama-200b/50d6bc94e17812873f39c36c5f815263fa71fb80/tokenizer_config.json HTTP/1.1" 200 0
+🟦 https://huggingface.co:443 "GET /api/models/anas-awadalla/mpt-1b-redpajama-200b/tree/main/additional_chat_templates?recursive=False&expand=False HTTP/1.1" 404 64
+🟩 パッドトークンを追加
+🟩 トークナイザーを読み込み GPTNeoXTokenizerFast(name_or_path='anas-awadalla/mpt-1b-redpajama-200b', vocab_size=50254, model_max_length=2048, is_fast=True, padding_side='right', truncation_side='right', special_tokens={'bos_token': '<|endoftext|>', 'eos_token': '<|endoftext|>', 'unk_token': '<|endoftext|>', 'pad_token': '<PAD>', 'additional_special_tokens': ['<|endofchunk|>', '<image>']}, clean_up_tokenization_spaces=False, added_tokens_decoder={
+	0: AddedToken("<|endoftext|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	1: AddedToken("<|padding|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	50254: AddedToken("                        ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50255: AddedToken("                       ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50256: AddedToken("                      ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50257: AddedToken("                     ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50258: AddedToken("                    ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50259: AddedToken("                   ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50260: AddedToken("                  ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50261: AddedToken("                 ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50262: AddedToken("                ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50263: AddedToken("               ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50264: AddedToken("              ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50265: AddedToken("             ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50266: AddedToken("            ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50267: AddedToken("           ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50268: AddedToken("          ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50269: AddedToken("         ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50270: AddedToken("        ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50271: AddedToken("       ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50272: AddedToken("      ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50273: AddedToken("     ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50274: AddedToken("    ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50275: AddedToken("   ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50276: AddedToken("  ", rstrip=False, lstrip=False, single_word=False, normalized=True, special=False),
+	50277: AddedToken("<|endofchunk|>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	50278: AddedToken("<image>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+	50279: AddedToken("<PAD>", rstrip=False, lstrip=False, single_word=False, normalized=False, special=True),
+}
+)
+🟦 https://huggingface.co:443 "HEAD /anas-awadalla/mpt-1b-redpajama-200b/resolve/main/config.json HTTP/1.1" 307 0
+🟦 https://huggingface.co:443 "HEAD /api/resolve-cache/models/anas-awadalla/mpt-1b-redpajama-200b/50d6bc94e17812873f39c36c5f815263fa71fb80/config.json HTTP/1.1" 200 0
+🟦 https://huggingface.co:443 "HEAD /anas-awadalla/mpt-1b-redpajama-200b/resolve/main/configuration_mosaic_gpt.py HTTP/1.1" 307 0
+🟦 https://huggingface.co:443 "HEAD /api/resolve-cache/models/anas-awadalla/mpt-1b-redpajama-200b/50d6bc94e17812873f39c36c5f815263fa71fb80/configuration_mosaic_gpt.py HTTP/1.1" 200 0
+🟦 https://huggingface.co:443 "HEAD /anas-awadalla/mpt-1b-redpajama-200b/resolve/main/mosaic_gpt.py HTTP/1.1" 307 0
+🟦 https://huggingface.co:443 "HEAD /api/resolve-cache/models/anas-awadalla/mpt-1b-redpajama-200b/50d6bc94e17812873f39c36c5f815263fa71fb80/mosaic_gpt.py HTTP/1.1" 200 0
+🟦 https://huggingface.co:443 "HEAD /anas-awadalla/mpt-1b-redpajama-200b/resolve/main/model.safetensors HTTP/1.1" 404 0
+🟦 https://huggingface.co:443 "HEAD /anas-awadalla/mpt-1b-redpajama-200b/resolve/main/generation_config.json HTTP/1.1" 307 0
+🟦 https://huggingface.co:443 "HEAD /api/resolve-cache/models/anas-awadalla/mpt-1b-redpajama-200b/50d6bc94e17812873f39c36c5f815263fa71fb80/generation_config.json HTTP/1.1" 200 0
+🟦 https://huggingface.co:443 "HEAD /anas-awadalla/mpt-1b-redpajama-200b/resolve/main/custom_generate/generate.py HTTP/1.1" 404 0
+🟩 テキストエンコーダーを読み込み完了 lang_encoder=MosaicGPT(
+  (transformer): ModuleDict(
+    (wte): Embedding(50432, 2048)
+    (emb_drop): Dropout(p=0, inplace=False)
+    (blocks): ModuleList(
+      (0-23): 24 x GPTBlock(
+        (ln_1): LPLayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+        (attn): MultiheadAttention(
+          (Wqkv): Linear(in_features=2048, out_features=6144, bias=False)
+          (q_ln): LayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+          (k_ln): LayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+          (out_proj): Linear(in_features=2048, out_features=2048, bias=False)
+        )
+        (ln_2): LPLayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+        (mlp): GPTMLP(
+          (mlp_up): Linear(in_features=2048, out_features=8192, bias=False)
+          (mlp_act): GELU(approximate='none')
+          (mlp_down): Linear(in_features=8192, out_features=2048, bias=False)
+        )
+        (resid_attn_dropout): Dropout(p=0, inplace=False)
+        (resid_mlp_dropout): Dropout(p=0, inplace=False)
+      )
+    )
+    (ln_f): LPLayerNorm((2048,), eps=1e-05, elementwise_affine=True)
+  )
+) lang_encoder.config=MosaicGPTConfig {
+  "alibi": true,
+  "alibi_bias_max": 8,
+  "architectures": [
+    "MosaicGPT"
+  ],
+  "attn_clip_qkv": null,
+  "attn_impl": "torch",
+  "attn_pdrop": 0,
+  "attn_qk_ln": true,
+  "attn_uses_sequence_id": false,
+  "auto_map": {
+    "AutoConfig": "configuration_mosaic_gpt.MosaicGPTConfig",
+    "AutoModelForCausalLM": "mosaic_gpt.MosaicGPT"
+  },
+  "d_model": 2048,
+  "dtype": "float32",
+  "emb_init_std": null,
+  "emb_init_uniform_lim": null,
+  "emb_pdrop": 0,
+  "embedding_fraction": 1.0,
+  "fan_mode": "fan_in",
+  "init_device": "cpu",
+  "init_div_is_residual": true,
+  "init_gain": 0,
+  "init_nonlinearity": "relu",
+  "init_std": 0.02,
+  "logit_scale": null,
+  "low_precision_layernorm": true,
+  "max_seq_len": 2048,
+  "mlp_ratio": 4,
+  "model_type": "mosaic_gpt",
+  "n_heads": 16,
+  "n_layers": 24,
+  "no_bias": true,
+  "param_init_fn": "kaiming_normal_",
+  "prefix_lm": false,
+  "resid_pdrop": 0,
+  "softmax_scale": null,
+  "tokenizer_name": "EleutherAI/gpt-neox-20b",
+  "transformers_version": "4.57.1",
+  "use_cache": false,
+  "verbose": 0,
+  "vocab_size": 50432
+}
+
+🟩 MPT EmbeddingFnMixinを適用
+🟩 FlamingoLMMixinを適用
+🟩 デコーダーレイヤーの属性名を推測 decoder_layers_attr_name='transformer.blocks'
+🟩 デコーダーレイヤーの属性名を設定 decoder_layers_attr_name='transformer.blocks'
+🟩 テキストエンコーダーのトークン埋め込みをリサイズ len(text_tokenizer)=50280
+🟩 Flamingoモデルを初期化 eoc_token_id=50277, media_token_id=50278, vis_dim=1024, cross_attn_every_n_layers=1, gradient_checkpointing=False
+🟩 PerceiverResamplerを初期化 dim=1024, depth=6, dim_head=64, heads=8, num_latents=64, max_num_media=None, max_num_frames=None, ff_mult=4
+🟩 PerceiverAttentionを初期化 dim=1024, dim_head=64, heads=8
+🟩 PerceiverAttentionの初期化完了
+🟩 PerceiverAttentionを初期化 dim=1024, dim_head=64, heads=8
+🟩 PerceiverAttentionの初期化完了
+🟩 PerceiverAttentionを初期化 dim=1024, dim_head=64, heads=8
+🟩 PerceiverAttentionの初期化完了
+🟩 PerceiverAttentionを初期化 dim=1024, dim_head=64, heads=8
+🟩 PerceiverAttentionの初期化完了
+🟩 PerceiverAttentionを初期化 dim=1024, dim_head=64, heads=8
+🟩 PerceiverAttentionの初期化完了
+🟩 PerceiverAttentionを初期化 dim=1024, dim_head=64, heads=8
+🟩 PerceiverAttentionの初期化完了
+🟩 PerceiverResamplerの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 GatedCrossAttentionBlockを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, ff_mult=4, only_attend_immediate_media=True
+🟩 MaskedCrossAttentionを初期化 dim=2048, dim_visual=1024, dim_head=64, heads=8, only_attend_immediate_media=True
+🟩 self.scale=0.125
+🟩 inner_dim=512
+🟩 MaskedCrossAttentionの初期化完了
+🟩 GatedCrossAttentionBlockの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 FlamingoLayerを初期化 gradient_checkpointing=False
+🟩 FlamingoLayerの初期化完了
+🟩 Flamingoモデルの初期化完了
+🟩 Flamingoモデル総パラメータ数: 2,559,117,360
+🟩 モデルの全パラメータをフリーズ
+🟩 Perceiverのパラメータをアンフリーズ
+🟩 Gated Cross Attention Layersのパラメータをアンフリーズ
+🟩 LM Input Embeddingsのパラメータをアンフリーズ
+🟩 訓練可能なパラメータ数: 1,046,992,944
+🟦 https://huggingface.co:443 "HEAD /openflamingo/OpenFlamingo-3B-vitl-mpt1b/resolve/main/checkpoint.pt HTTP/1.1" 302 0
+🟦 Starting new HTTP connection (1): images.cocodataset.org:80
+🟦 http://images.cocodataset.org:80 "GET /val2017/000000039769.jpg HTTP/1.1" 200 173131
+🟦 Starting new HTTP connection (1): images.cocodataset.org:80
+🟦 http://images.cocodataset.org:80 "GET /test-stuff2017/000000028137.jpg HTTP/1.1" 200 184441
+🟦 Starting new HTTP connection (1): images.cocodataset.org:80
+🟦 http://images.cocodataset.org:80 "GET /test-stuff2017/000000028352.jpg HTTP/1.1" 200 169658
+🟩 画像を前処理 vision_x[0].shape=torch.Size([1, 3, 224, 224]), vision_x[0].dtype=torch.float32
+🟩 画像を結合 vision_x.shape=torch.Size([3, 3, 224, 224]), vision_x.dtype=torch.float32
+🟩 画像をリシェイプ vision_x.shape=torch.Size([1, 3, 1, 3, 224, 224]), vision_x.dtype=torch.float32
+🟩 テキストを準備 text_list=['<image>An image of two cats.<|endofchunk|><image>An image of a bathroom sink.<|endofchunk|><image>An image of']
+🟩 テキストを前処理 lang_x['input_ids']=tensor([[50278,  1145,  2460,   273,   767, 16581,    15, 50277, 50278,  1145,
+          2460,   273,   247, 15336, 16338,    15, 50277, 50278,  1145,  2460,
+           273]])
+🟩 Flamingoのgenerate開始 vision_x.shape=torch.Size([1, 3, 1, 3, 224, 224]), lang_x.shape=torch.Size([1, 21]), None if attention_mask is None else attention_mask.shape=torch.Size([1, 21]), dict_keys(['max_new_tokens', 'num_beams'])
+🟩 PerceiverResamplerの順伝播開始 x.shape=torch.Size([3, 3, 1, 256, 1024]), x.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播開始 x.shape=torch.Size([3, 3, 256, 1024]), x.dtype=torch.float32 latents.shape=torch.Size([3, 3, 64, 1024]), latents.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播完了 out.shape=torch.Size([3, 3, 64, 1024]) out.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播開始 x.shape=torch.Size([3, 3, 256, 1024]), x.dtype=torch.float32 latents.shape=torch.Size([3, 3, 64, 1024]), latents.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播完了 out.shape=torch.Size([3, 3, 64, 1024]) out.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播開始 x.shape=torch.Size([3, 3, 256, 1024]), x.dtype=torch.float32 latents.shape=torch.Size([3, 3, 64, 1024]), latents.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播完了 out.shape=torch.Size([3, 3, 64, 1024]) out.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播開始 x.shape=torch.Size([3, 3, 256, 1024]), x.dtype=torch.float32 latents.shape=torch.Size([3, 3, 64, 1024]), latents.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播完了 out.shape=torch.Size([3, 3, 64, 1024]) out.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播開始 x.shape=torch.Size([3, 3, 256, 1024]), x.dtype=torch.float32 latents.shape=torch.Size([3, 3, 64, 1024]), latents.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播完了 out.shape=torch.Size([3, 3, 64, 1024]) out.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播開始 x.shape=torch.Size([3, 3, 256, 1024]), x.dtype=torch.float32 latents.shape=torch.Size([3, 3, 64, 1024]), latents.dtype=torch.float32
+🟩 PerceiverAttentionの順伝播完了 out.shape=torch.Size([3, 3, 64, 1024]) out.dtype=torch.float32
+🟩 PerceiverResamplerの順伝播完了 out.shape=torch.Size([3, 3, 64, 1024]) out.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 21, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 21, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 21]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 21, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 21, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 22, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 22, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 22]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 22, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 22, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 23, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 23, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 23]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 23, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 23, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 24, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 24, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 24]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 24, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 24, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 25, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 25, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 25]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 25, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 25, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 GatedCrossAttentionBlockの順伝播開始 x.shape=torch.Size([3, 26, 2048]), x.dtype=torch.float32 media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播開始 x.shape=torch.Size([3, 26, 2048]), media.shape=torch.Size([3, 3, 64, 1024]), None if media_locations is None else media_locations.shape=torch.Size([3, 26]), use_cached_media=False
+🟩 MaskedCrossAttentionの順伝播完了 out.shape=torch.Size([3, 26, 2048])
+🟩 GatedCrossAttentionBlockの順伝播完了 x.shape=torch.Size([3, 26, 2048]) x.dtype=torch.float32
+🟩 Flamingoのgenerate完了 output.shape=torch.Size([1, 27]) output.dtype=torch.int64
+🟩 テキスト生成完了 tensor([[50278,  1145,  2460,   273,   767, 16581,    15, 50277, 50278,  1145,
+          2460,   273,   247, 15336, 16338,    15, 50277, 50278,  1145,  2460,
+           273,   247,  9449, 14664,   292,    15, 50277]])
+🟩 生成されたテキスト: <image>An image of two cats.<|endofchunk|><image>An image of a bathroom sink.<|endofchunk|><image>An image of a Christmas buffet.<|endofchunk|>

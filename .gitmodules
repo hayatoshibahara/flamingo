@@ -1,0 +1,6 @@
+[submodule "open_flamingo"]
+	path = open_flamingo
+	url = git@github.com:mlfoundations/open_flamingo
+[submodule ".devcontainer"]
+	path = .devcontainer
+	url = git@github.com:hayatoshibahara/.devcontainer
